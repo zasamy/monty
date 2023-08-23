@@ -9,16 +9,16 @@
 */
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
-	instruction_t opst[] = {
-				{"push", op_push}, {"pall", op_pall},
-			
-				{"pint", op_pint}, {"nop", op_nop},
-				{"pop", op_pop},
-				
-				{NULL, NULL}
-				};
 	unsigned int a = 0;
 	char *b;
+
+	instruction_t opst[] = {
+		{"push", op_push}, {"pall", op_pall},
+		{"pint", op_pint}, {"nop", op_nop},
+		{"pop", op_pop},
+		NULL, NULL}
+	};
+
 
 	b = strtok(content, " \n\t");
 	if (b && b[0] == '#')

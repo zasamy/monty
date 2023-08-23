@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * f_push - pushes an element to the stack
+ * op_push - pushes an element to the stack
  * @head: head
- * @counter: line
+ * @count: line
  * Return: nothing
 */
 void op_push(stack_t **head, unsigned int count)

@@ -24,7 +24,7 @@ void f_sub(stack_t **head, unsigned int counter)
 	}
 	temp = *head;
 	c = temp->next->n - temp->n;
-        temp->next->n = c;
+	temp->next->n = c;
 	*head = temp->next;
 	free(temp);
 }

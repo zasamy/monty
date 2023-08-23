@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * f_pall - prints all the values on the stack.
+ * op_pall - prints all the values on the stack.
  * @head: stack head
- * @counter: counter
+ * @count: counter
  * Return: nothing
 */
 void op_pall(stack_t **head, unsigned int count)
