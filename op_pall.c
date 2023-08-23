@@ -5,17 +5,16 @@
  * @counter: counter
  * Return: nothing
 */
-void f_pall(stack_t **head, unsigned int counter)
+void op_pall(stack_t **head, unsigned int count)
 {
-	stack_t *a;
-	(void)counter;
-
-	a = *head;
-	if (a == NULL)
+	stack_t *i;
+	(void)count;
+	i = *head;
+	if (i == NULL)
 		return;
-	while (a)
+	while (i)
 	{
-		printf("%d\n", a->n);
-		a = a->next;
+		printf("%d\n", i->n);
+		i = i->next;
 	}
 }
