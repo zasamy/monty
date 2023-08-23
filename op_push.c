@@ -5,33 +5,33 @@
  * @counter: line
  * Return: nothing
 */
-void f_push(stack_t **head, unsigned int counter)
+void op_push(stack_t **head, unsigned int count)
 {
-	int a, b = 0, c = 0;
+	int i, j = 0, k = 0;
 
 	if (bus.arg)
 	{
 		if (bus.arg[0] == '-')
-			b++;
-		for (; bus.arg[b] != '\0'; b++)
+			j++;
+		for (; bus.arg[j] != '\0'; j++)
 		{
-			if (bus.arg[b] > 57 || bus.arg[b] < 48)
-				c = 1; }
-		if (c == 1)
-		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+				k = 1; }
+		if (k == 1)
+		{ fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(bus.file);
 			free(bus.content);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
-	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+	{ fprintf(stderr, "L%d: usage: push integer\n", count);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	a = atoi(bus.arg);
+	i = atoi(bus.arg);
 	if (bus.lifi == 0)
-		addnode(head, a);
+		addnode(head, i);
 	else
-		addqueue(head, a);
+		addqueue(head, i);
 }
