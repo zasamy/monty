@@ -18,7 +18,7 @@ void op_rotr(stack_t **head, __attribute__((unused)) unsigned int count)
 	{
 		temp = temp->next;
 	}
-        temp->next = *head;
+	temp->next = *head;
 	temp->prev->next = NULL;
 	temp->prev = NULL;
 	(*head)->prev = temp;

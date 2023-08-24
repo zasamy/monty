@@ -3,7 +3,7 @@
 /**
  * op_div - divides the top two elements of the stack.
  * @head: Pointer to a pointer pointing to top node of the stack.
- * @counter: Interger representing the line number of of the opcode.
+ * @count: Interger representing the line number of of the opcode.
  * Return: nothing
  */
 void op_div(stack_t **head, unsigned int count)

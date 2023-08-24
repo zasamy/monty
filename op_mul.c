@@ -2,7 +2,7 @@
 /**
  * op_mul - multiplies two elements of stack.
  * @head: head
- * @counter: line number
+ * @count: line number
  * Return: nothing
 */
 void op_mul(stack_t **head, unsigned int count)
