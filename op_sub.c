@@ -11,7 +11,7 @@ void op_sub(stack_t **head, unsigned int count)
 
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 	{
-		fprintf(stderr, "L%u: can't sub, stack too short\n", counter);
+		fprintf(stderr, "L%u: can't sub, stack too short\n", count);
 		exit(EXIT_FAILURE);
 	}
 	(*head) = (*head)->next;

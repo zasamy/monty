@@ -5,7 +5,7 @@
   *@count: line number
   *Return: nothing
  */
-void f_nop(stack_t **head, unsigned int count)
+void op_nop(stack_t **head, unsigned int count)
 {
 	(void) count;
 	(void) head;
