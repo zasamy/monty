@@ -6,7 +6,7 @@
  * Return: nothing
 */
 
-void f _swap(stack_t **head, unsigned int counter)
+void f_swap(stack_t **head, unsigned int counter)
 {
 	stack_t *temp_variable;
 
