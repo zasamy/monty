@@ -1,14 +1,14 @@
 #include "monty.h"
 /**
- * f_queue - prints the top
+ * op_queue - function that sets the format of the data to a queue (FIFO).
  * @head: head
- * @counter: line
+ * @counter: line number
  * Return: nothing
 */
-void f_queue(stack_t **head, unsigned int counter)
+void op_queue(stack_t **head, unsigned int count)
 {
 	(void)head;
-	(void)counter;
+	(void)count;
 	bus.lifi = 1;
 }
 

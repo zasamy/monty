@@ -1,11 +1,12 @@
 #include "monty.h"
 
 /**
- * f_div - divides the top two elements of the stack.
+ * op_div - divides the top two elements of the stack.
  * @head: Pointer to a pointer pointing to top node of the stack.
  * @counter: Interger representing the line number of of the opcode.
+ * Return: nothing
  */
-void f_div(stack_t **head, unsigned int counter)
+void op_div(stack_t **head, unsigned int count)
 {
 	int temp;
 

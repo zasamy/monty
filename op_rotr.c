@@ -1,26 +1,26 @@
 #include "monty.h"
 /**
-  *f_rotr- rotates the stack to the bottom
+  *op_rotr- rotates the stack to the bottom
   *@head: head
-  *@counter: line
+  *@count: line number
   *Return: nothing
  */
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter)
+void op_rotr(stack_t **head, __attribute__((unused)) unsigned int count)
 {
-	stack_t *a;
+	stack_t *temp;
 
-	a = *head;
+	temp = *head;
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return;
 	}
-	while (a->next)
+	while (temp->next)
 	{
-		a = a->next;
+		temp = temp->next;
 	}
-        a->next = *head;
-	a->prev->next = NULL;
-	a->prev = NULL;
-	(*head)->prev = a;
-	(*head) = a;
+        temp->next = *head;
+	temp->prev->next = NULL;
+	temp->prev = NULL;
+	(*head)->prev = temp;
+	(*head) = temp;
 }

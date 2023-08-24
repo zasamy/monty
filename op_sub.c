@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
-  *f_sub- subtracts the top element of the stack
+  *op_sub- subtracts the top element of the stack
   *@head: head
-  *@counter: line
+  *@count: line
   *Return: nothing
  */
-void f_sub(stack_t **head, unsigned int counter)
+void op_sub(stack_t **head, unsigned int count)
 {
 	int temp;
 

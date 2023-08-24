@@ -1,40 +1,40 @@
 #include "monty.h"
 /**
- * f_mod - computes the rest of the division
+ * op_mod - computes the rest of the division
  * @head: head
- * @counter: line
+ * @count: line number
  * Return: nothing
 */
-void f_mod(stack_t **head, unsigned int counter)
+void op_mod(stack_t **head, unsigned int count)
 {
-	stack_t *a;
+	stack_t *temp;
 	int l = 0, b;
 
-	a = *head;
-	while (a)
+	temp = *head;
+	while (temp)
 	{
-		a = a->next;
+		temp = temp->next;
 		l++;
 	}
 	if (l < 2)
 	{
-		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", count);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	a = *head;
-	if (a->n == 0)
+	temp = *head;
+	if (temp->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", count);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	b = a->next->n % a->n;
-	a->next->n = b;
-	*head = a->next;
-	free(a);
+	b = temp->next->n % temp->n;
+	temp->next->n = b;
+	*head = temp->next;
+	free(temp);
 }
