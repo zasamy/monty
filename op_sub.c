@@ -5,17 +5,18 @@
   *@counter: line
   *Return: nothing
  */
-void _sub(stack_t **head, unsigned int counter)
+void f_sub(stack_t **head, unsigned int counter)
 {
-	int temp_variable;
+	int temp;
 
-	if (!(*head) || !(*head)->next)
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n", counter);
 		exit(EXIT_FAILURE);
 	}
-
-	temp_variable = (*head)->n;
-	f_pop(head, counter);
-	(*head)->n -= temp_variable;
+	(*head) = (*head)->next;
+	temp = (*head)->n - (*head)->prev->n;
+	(*head)->n = temp;
+	free((*head)->prev);
+	(*head)->prev = NULL;
 }
