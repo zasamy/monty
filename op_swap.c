@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * f_swap - swaps the top two elements of the stack.
+ * op_swap - swaps the top two elements of the stack.
  * @head: double pointer to the head of stack
- * @counter: line number
+ * @count: line number
  * Return: nothing
 */
-void f_swap(stack_t **head, unsigned int counter)
+void op_swap(stack_t **head, unsigned int count)
 {
 	stack_t *temp;
 	int l = 0, b;
@@ -18,7 +18,7 @@ void f_swap(stack_t **head, unsigned int counter)
 	}
 	if (l < 2)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", count);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
